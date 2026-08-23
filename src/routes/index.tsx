@@ -96,6 +96,9 @@ function Gate({ entered, onEnter }: { entered: boolean; onEnter: () => void }) {
         <h1 className="font-display text-6xl leading-none tracking-tight text-ivory sm:text-8xl md:text-9xl">
           {config.heroTitle}
         </h1>
+        <p className="label-xs mx-auto mt-8 max-w-md text-wine/80">
+          {config.birthdayDate}
+        </p>
         <div className="mx-auto mt-10 max-w-md space-y-1 text-sm text-ivory/55 sm:text-base">
           {config.heroLines.map((l) => (
             <p key={l} className="font-display italic">
