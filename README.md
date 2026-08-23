@@ -10,11 +10,11 @@ Birthday girl: SK
 
 Color palette:
 
-* Deep Black: #080808
-* Soft White / Ivory: #F5F1EA
-* Deep Wine / Burgundy: #6B1E35
-* Dark Wine: #3A0D1C
-* Very subtle metallic/soft highlights
+- Deep Black: #080808
+- Soft White / Ivory: #F5F1EA
+- Deep Wine / Burgundy: #6B1E35
+- Dark Wine: #3A0D1C
+- Very subtle metallic/soft highlights
 
 Do NOT use bright pink, childish birthday colors, rainbow colors, balloons everywhere, cartoon elements, or generic birthday templates.
 
@@ -29,23 +29,23 @@ TECHNOLOGY
 
 Build it as a modern responsive web application using:
 
-* React / Next.js
-* TypeScript
-* Tailwind CSS
-* Three.js
-* React Three Fiber
-* @react-three/drei
-* GSAP or Framer Motion
-* Lucide icons
+- React / Next.js
+- TypeScript
+- Tailwind CSS
+- Three.js
+- React Three Fiber
+- @react-three/drei
+- GSAP or Framer Motion
+- Lucide icons
 
 Use 3D elements carefully so the website remains elegant and performant.
 
 The website must work beautifully on:
 
-* Desktop
-* Laptop
-* Tablet
-* Mobile
+- Desktop
+- Laptop
+- Tablet
+- Mobile
 
 ---
 
@@ -84,14 +84,14 @@ After clicking "ENTER HER WORLD", transition into a 3D environment.
 
 Create a dark luxurious scene containing:
 
-* Floating translucent glass particles
-* Slowly moving wine-colored light
-* Subtle white particles
-* Floating thin 3D rings
-* Soft fog
-* Glass-like geometric shapes
-* Very subtle depth-of-field
-* Slow camera movement
+- Floating translucent glass particles
+- Slowly moving wine-colored light
+- Subtle white particles
+- Floating thin 3D rings
+- Soft fog
+- Glass-like geometric shapes
+- Very subtle depth-of-field
+- Slow camera movement
 
 Avoid making the scene visually crowded.
 
@@ -113,11 +113,11 @@ Create a floating 3D portrait frame.
 
 The photo should appear inside a sophisticated glass / metallic frame with:
 
-* Thin wine-colored border
-* Soft white glow
-* Subtle reflection
-* 3D depth
-* Slow floating animation
+- Thin wine-colored border
+- Soft white glow
+- Subtle reflection
+- 3D depth
+- Slow floating animation
 
 When the user scrolls or interacts with it, the frame should slightly rotate in 3D.
 
@@ -205,12 +205,12 @@ TODAY
 
 Each card should have:
 
-* Small photo placeholder
-* Date placeholder
-* Short text
-* 3D hover effect
-* Wine-colored glow
-* Smooth reveal animation
+- Small photo placeholder
+- Date placeholder
+- Short text
+- 3D hover effect
+- Wine-colored glow
+- Smooth reveal animation
 
 I should be able to replace the placeholder photos easily.
 
@@ -258,12 +258,12 @@ Do NOT use a cartoon cake.
 
 Make it elegant and realistic/stylized:
 
-* Dark chocolate / black cake
-* Ivory cream
-* Wine-colored decoration
-* One or a few elegant candles
-* Subtle candle flame animation
-* Soft volumetric light
+- Dark chocolate / black cake
+- Ivory cream
+- Wine-colored decoration
+- One or a few elegant candles
+- Subtle candle flame animation
+- Soft volumetric light
 
 Place it in a dark 3D environment.
 
@@ -277,12 +277,12 @@ MAKE A WISH
 
 When clicked:
 
-* Candle flames glow brighter
-* Particles rise
-* Wine-colored light expands
-* Camera slowly moves closer
-* Elegant particles float upward
-* Show:
+- Candle flames glow brighter
+- Particles rise
+- Wine-colored light expands
+- Camera slowly moves closer
+- Elegant particles float upward
+- Show:
 
 "May this year be your favorite chapter yet."
 
@@ -363,16 +363,16 @@ The navigation should feel like a luxury portfolio website.
 
 Add subtle interactions throughout:
 
-* Mouse-based camera parallax
-* 3D card tilt
-* Floating objects
-* Scroll-based camera movement
-* Smooth section transitions
-* Wine-colored light following cursor
-* Particle movement
-* Glass reflections
-* Depth-of-field
-* Smooth page transitions
+- Mouse-based camera parallax
+- 3D card tilt
+- Floating objects
+- Scroll-based camera movement
+- Smooth section transitions
+- Wine-colored light following cursor
+- Particle movement
+- Glass reflections
+- Depth-of-field
+- Smooth page transitions
 
 Do NOT overuse animations.
 
@@ -390,8 +390,8 @@ Create a small floating music button.
 
 When clicked:
 
-* Play/pause background music
-* Animate the button subtly
+- Play/pause background music
+- Animate the button subtly
 
 Use a placeholder audio file so I can replace it later.
 
@@ -401,15 +401,15 @@ CUSTOMIZATION
 
 Create a simple centralized configuration/data file where I can easily change:
 
-* Birthday girl's name
-* Birthday message
-* Timeline memories
-* Memory photos
-* Birthday date
-* Final message
-* Music file
-* Main portrait
-* Colors
+- Birthday girl's name
+- Birthday message
+- Timeline memories
+- Memory photos
+- Birthday date
+- Final message
+- Music file
+- Main portrait
+- Colors
 
 Use clear comments showing exactly where I should replace the content.
 
@@ -437,19 +437,19 @@ VISUAL QUALITY
 
 The website should feel inspired by:
 
-* Luxury fashion websites
-* Cinematic portfolios
-* Interactive digital art
-* Premium photography websites
-* High-end editorial design
+- Luxury fashion websites
+- Cinematic portfolios
+- Interactive digital art
+- Premium photography websites
+- High-end editorial design
 
 It should NOT look like:
 
-* A school birthday project
-* A children's birthday website
-* A generic Bootstrap website
-* A template with balloons and confetti
-* A standard portfolio
+- A school birthday project
+- A children's birthday website
+- A generic Bootstrap website
+- A template with balloons and confetti
+- A standard portfolio
 
 ---
 
@@ -459,13 +459,13 @@ Optimize the 3D experience.
 
 Use:
 
-* Lazy loading
-* Suspense
-* Optimized textures
-* Compressed assets
-* Reduced particle count on mobile
-* Responsive rendering
-* Mobile-friendly 3D effects
+- Lazy loading
+- Suspense
+- Optimized textures
+- Compressed assets
+- Reduced particle count on mobile
+- Responsive rendering
+- Mobile-friendly 3D effects
 
 Provide a fallback experience for low-performance devices.
 
@@ -509,3 +509,5 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+#   s k  
+ 
