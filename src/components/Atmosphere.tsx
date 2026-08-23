@@ -6,7 +6,10 @@ export function Atmosphere() {
   const [count, setCount] = useState(18);
 
   useEffect(() => {
-    setCount(window.innerWidth < 768 ? 8 : 22);
+    const updateCount = () => setCount(window.innerWidth < 768 ? 8 : 22);
+    updateCount();
+    window.addEventListener("resize", updateCount);
+
     const onMove = (e: PointerEvent) => {
       const el = ref.current;
       if (!el) return;
@@ -14,7 +17,10 @@ export function Atmosphere() {
       el.style.setProperty("--my", `${e.clientY}px`);
     };
     window.addEventListener("pointermove", onMove, { passive: true });
-    return () => window.removeEventListener("pointermove", onMove);
+    return () => {
+      window.removeEventListener("resize", updateCount);
+      window.removeEventListener("pointermove", onMove);
+    };
   }, []);
 
   return (

@@ -17,9 +17,11 @@ export function TiltCard({
       ref={ref}
       style={{ perspective: "1200px" }}
       onPointerMove={(e) => {
+        if (e.pointerType && e.pointerType !== "mouse") return;
         const el = ref.current?.firstElementChild as HTMLElement | null;
         if (!el) return;
         const r = el.getBoundingClientRect();
+        if (r.width === 0 || r.height === 0) return;
         const px = (e.clientX - r.left) / r.width - 0.5;
         const py = (e.clientY - r.top) / r.height - 0.5;
         el.style.transform = `rotateY(${px * max * 2}deg) rotateX(${-py * max * 2}deg) translateZ(14px)`;
