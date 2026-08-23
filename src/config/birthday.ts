@@ -14,7 +14,7 @@ import sk9 from "@/assets/sk9.jpg.asset.json";
 export const config = {
   /* ---- BASICS ---- */
   name: "SK",
-  birthdayDate: "23 August", // shown small in the footer
+  birthdayDate: "03 December 2004", // shown in the hero and final
 
   /* ---- MAIN PORTRAIT (replace the import above to change) ---- */
   portrait: portrait.url,
