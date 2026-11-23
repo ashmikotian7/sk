@@ -4,12 +4,14 @@
  * ============================================================
  */
 
-import portrait from "@/assets/portrait.png.asset.json";
-import sk4 from "@/assets/sk4.jpg.asset.json";
-import sk5 from "@/assets/sk5.jpg.asset.json";
-import sk7 from "@/assets/sk7.jpg.asset.json";
-import sk8 from "@/assets/sk8.jpg.asset.json";
-import sk9 from "@/assets/sk9.jpg.asset.json";
+import portrait from "@/assets/portrait.jpg";
+import sk4 from "@/assets/sk4.jpeg";
+import sk5 from "@/assets/sk5.jpeg";
+import sk1 from "@/assets/sk1.jpeg";
+import sk6 from "@/assets/sk6.jpeg";
+import sk7 from "@/assets/sk7.jpeg";
+import sk8 from "@/assets/sk8.jpeg";
+import sk9 from "@/assets/sk9.jpeg";
 
 export const config = {
   /* ---- BASICS ---- */
@@ -17,7 +19,7 @@ export const config = {
   birthdayDate: "03 December 2004", // shown in the hero and final
 
   /* ---- MAIN PORTRAIT (replace the import above to change) ---- */
-  portrait: portrait.url,
+  portrait: sk1,
   portraitCaption: "The girl behind all the memories.",
   portraitSubCaption: "SK — effortlessly herself.",
 
@@ -49,37 +51,37 @@ Stay exactly as wonderfully you as you are.`,
       title: "THE FIRST HELLO",
       date: "Chapter one",
       text: "Two people who didn't know that one day they'd have so many stories.",
-      photo: sk5.url,
+      photo: sk5,
     },
     {
       title: "THE RANDOM CONVERSATIONS",
       date: "Every other night",
       text: "Some conversations were completely unnecessary. Somehow, they became the best ones.",
-      photo: sk9.url,
+      photo: sk9,
     },
     {
       title: "THE LAUGHTER",
       date: "Always",
       text: "Some laughs simply cannot be explained.",
-      photo: sk8.url,
+      photo: sk8,
     },
     {
       title: "THE GOSSIP",
       date: "Classified",
       text: "Important discussions. Extremely important discussions.",
-      photo: sk7.url,
+      photo: sk7,
     },
     {
       title: "THE ADVENTURES",
       date: "Whenever we could",
       text: "Places, food, chaos, and memories.",
-      photo: sk4.url,
+      photo: sk4,
     },
     {
       title: "TODAY",
       date: "Right now",
       text: "Still collecting stories.",
-      photo: portrait.url,
+      photo: sk6,
     },
   ],
 
