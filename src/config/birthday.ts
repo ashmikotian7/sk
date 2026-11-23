@@ -5,13 +5,17 @@
  */
 
 import portrait from "@/assets/portrait.jpg";
-import sk4 from "@/assets/sk4.jpeg";
-import sk5 from "@/assets/sk5.jpeg";
-import sk1 from "@/assets/sk1.jpeg";
-import sk6 from "@/assets/sk6.jpeg";
-import sk7 from "@/assets/sk7.jpeg";
-import sk8 from "@/assets/sk8.jpeg";
-import sk9 from "@/assets/sk9.jpeg";
+import mem1 from "@/assets/mem1.jpg";
+import mem2 from "@/assets/mem2.jpg";
+import mem3 from "@/assets/mem3.jpg";
+import mem4 from "@/assets/mem4.jpg";
+import mem5 from "@/assets/mem5.jpg";
+import mem6 from "@/assets/mem6.jpg";
+import mem7 from "@/assets/mem7.jpg";
+import mem8 from "@/assets/mem8.jpg";
+import mem9 from "@/assets/mem9.jpg";
+import mem10 from "@/assets/mem10.jpg";
+import mem11 from "@/assets/mem11.jpg";
 
 export const config = {
   /* ---- BASICS ---- */
@@ -19,7 +23,7 @@ export const config = {
   birthdayDate: "03 December 2004", // shown in the hero and final
 
   /* ---- MAIN PORTRAIT (replace the import above to change) ---- */
-  portrait: sk1,
+  portrait: portrait,
   portraitCaption: "The girl behind all the memories.",
   portraitSubCaption: "SK — effortlessly herself.",
 
@@ -44,45 +48,11 @@ I hope this year gives you more reasons to smile, more places to explore, more m
 
 Stay exactly as wonderfully you as you are.`,
 
-  /* ---- MEMORY TIMELINE (swap photo / date / text freely) ---- */
+  /* ---- MEMORY GALLERY (photos only — displayed as a masonry wall) ---- */
   timelineTitle: "Little moments. Big memories.",
   memories: [
-    {
-      title: "THE FIRST HELLO",
-      date: "Chapter one",
-      text: "Two people who didn't know that one day they'd have so many stories.",
-      photo: sk5,
-    },
-    {
-      title: "THE RANDOM CONVERSATIONS",
-      date: "Every other night",
-      text: "Some conversations were completely unnecessary. Somehow, they became the best ones.",
-      photo: sk9,
-    },
-    {
-      title: "THE LAUGHTER",
-      date: "Always",
-      text: "Some laughs simply cannot be explained.",
-      photo: sk8,
-    },
-    {
-      title: "THE GOSSIP",
-      date: "Classified",
-      text: "Important discussions. Extremely important discussions.",
-      photo: sk7,
-    },
-    {
-      title: "THE ADVENTURES",
-      date: "Whenever we could",
-      text: "Places, food, chaos, and memories.",
-      photo: sk4,
-    },
-    {
-      title: "TODAY",
-      date: "Right now",
-      text: "Still collecting stories.",
-      photo: sk6,
-    },
+    mem1, mem2, mem3, mem4, mem5, mem6,
+    mem7, mem8, mem9, mem10, mem11, portrait,
   ],
 
   /* ---- THINGS I LOVE ---- */

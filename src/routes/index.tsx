@@ -219,8 +219,8 @@ function Portrait() {
                   />
                 </div>
               </div>
-              <div className="absolute -inset-x-4 -bottom-6 h-20 scale-y-[-1] overflow-hidden opacity-15 blur-sm sm:-inset-x-6 sm:-bottom-8 sm:h-24">
-                <img src={config.portrait} alt="" aria-hidden className="w-full object-cover" />
+              <div className="absolute -inset-x-4 -bottom-6 h-20 scale-y-[-1] overflow-hidden opacity-50 blur-sm sm:-inset-x-6 sm:-bottom-8 sm:h-24">
+                <img src={config.portrait} alt={`Portrait of ${config.name}`} className="w-full object-cover" />
               </div>
             </div>
           </TiltCard>
@@ -258,36 +258,60 @@ function Message() {
 
 /* -------------------------------------------------------------- TIMELINE */
 function Timeline() {
+  const [hovered, setHovered] = useState<number | null>(null);
+
+  // Stagger rotations for a scattered polaroid feel
+  const rotations = [-3, 2, -1.5, 3, -2.5, 1, -2, 2.5, -1, 3, -3, 1.5];
+
   return (
-    <section id="memories" className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 md:py-36">
-      <Reveal className="text-center md:text-left">
-        <p className="label-xs text-wine">02 — Timeline</p>
+    <section id="memories" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 md:py-36">
+      <Reveal className="text-center">
+        <p className="label-xs text-wine">02 — Memories</p>
         <h2 className="mt-4 font-display text-3xl leading-tight text-ivory sm:mt-6 sm:text-4xl md:text-5xl">
           {config.timelineTitle}
         </h2>
+        <p className="mt-4 font-display text-base italic text-ivory/40 sm:text-lg">
+          Every frame, a feeling.
+        </p>
       </Reveal>
-      <div className="mt-10 grid gap-6 sm:mt-16 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
-        {config.memories.map((m, i) => (
-          <Reveal key={m.title} className={i % 3 === 1 ? "lg:mt-8" : ""}>
-            <TiltCard max={6}>
-              <article className="tilt-3d glass-panel group h-full rounded-sm p-3.5 transition-all duration-500 hover:wine-glow sm:p-4">
-                <div className="overflow-hidden rounded-sm">
+
+      {/* Masonry-style polaroid wall */}
+      <div className="mt-12 columns-2 gap-4 sm:mt-16 sm:columns-3 sm:gap-5 lg:columns-4 lg:gap-6">
+        {config.memories.map((photo, i) => (
+          <Reveal key={i} className="mb-4 break-inside-avoid sm:mb-5">
+            <div
+              className="group relative cursor-pointer"
+              style={{
+                transform: hovered === i ? "rotate(0deg) scale(1.05)" : `rotate(${rotations[i % rotations.length]}deg)`,
+                transition: "transform 0.5s cubic-bezier(0.16,1,0.3,1)",
+                zIndex: hovered === i ? 20 : 1,
+              }}
+              onMouseEnter={() => setHovered(i)}
+              onMouseLeave={() => setHovered(null)}
+            >
+              {/* Polaroid frame */}
+              <div
+                className="relative overflow-hidden rounded-sm shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-shadow duration-500 group-hover:shadow-[0_16px_48px_rgba(var(--wine-rgb,120,20,40),0.4)]"
+                style={{ background: "oklch(0.14 0.01 350)" }}
+              >
+                {/* Top photo area */}
+                <div className="overflow-hidden p-2 pb-0 sm:p-3 sm:pb-0">
                   <img
-                    src={m.photo}
-                    alt={m.title}
+                    src={photo}
+                    alt={`Memory ${i + 1}`}
                     loading="lazy"
-                    className="aspect-[4/5] w-full object-cover opacity-90 transition-all duration-[1200ms] group-hover:scale-105 group-hover:opacity-100 sm:opacity-80"
+                    className="w-full object-cover transition-all duration-[1400ms] group-hover:scale-105"
+                    style={{ display: "block" }}
                   />
                 </div>
-                <div className="px-1.5 pb-2 pt-4 sm:px-2 sm:pt-6">
-                  <p className="label-xs text-ivory/35">{m.date}</p>
-                  <h3 className="label-xs mt-2 text-wine sm:mt-3">{m.title}</h3>
-                  <p className="mt-3 font-display text-base leading-snug text-ivory/75 sm:mt-4 sm:text-lg">
-                    {m.text}
-                  </p>
+                {/* Polaroid bottom strip — just a subtle glow line */}
+                <div className="flex items-center justify-center py-3 sm:py-4">
+                  <div className="h-px w-8 bg-wine/40 transition-all duration-500 group-hover:w-16 group-hover:bg-wine/80" />
                 </div>
-              </article>
-            </TiltCard>
+                {/* Wine glow overlay on hover */}
+                <div className="absolute inset-0 rounded-sm border border-wine/0 transition-all duration-500 group-hover:border-wine/30 group-hover:shadow-[inset_0_0_30px_rgba(120,20,40,0.15)]" />
+              </div>
+            </div>
           </Reveal>
         ))}
       </div>
