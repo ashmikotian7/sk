@@ -8,6 +8,13 @@ import portrait from "@/assets/portrait.jpg";
 import mem1 from "@/assets/mem1.jpg";
 import mem2 from "@/assets/mem2.jpg";
 import mem3 from "@/assets/mem3.jpg";
+import sk1 from "@/assets/sk1.jpeg";
+import sk4 from "@/assets/sk4.jpeg";
+import sk5 from "@/assets/sk5.jpeg";
+import sk6 from "@/assets/sk6.jpeg";
+import sk7 from "@/assets/sk7.jpeg";
+import sk8 from "@/assets/sk8.jpeg";
+import sk9 from "@/assets/sk9.jpeg";  
 import mem4 from "@/assets/mem4.jpg";
 import mem5 from "@/assets/mem5.jpg";
 import mem6 from "@/assets/mem6.jpg";
@@ -23,7 +30,7 @@ export const config = {
   birthdayDate: "03 December 2004", // shown in the hero and final
 
   /* ---- MAIN PORTRAIT (replace the import above to change) ---- */
-  portrait: portrait,
+  portrait: sk1,
   portraitCaption: "The girl behind all the memories.",
   portraitSubCaption: "SK — effortlessly herself.",
 
@@ -52,22 +59,36 @@ Stay exactly as wonderfully you as you are.`,
   timelineTitle: "Little moments. Big memories.",
   memories: [
     mem1, mem2, mem3, mem4, mem5, mem6,
-    mem7, mem8, mem9, mem10, mem11, portrait,
+    mem7, mem8, mem9, mem10, mem11, sk4, sk5, sk6, sk7, sk8, sk9
   ],
 
-  /* ---- THINGS I LOVE ---- */
-  thingsTitle: "Things that make you, you.",
-  things: [
-    { label: "Your laugh", note: "The one that starts a chain reaction." },
-    { label: "Your energy", note: "Rooms change temperature when you walk in." },
-    { label: "Your random talks", note: "No topic, no point, no regrets." },
-    { label: "Your kindness", note: "Quiet, constant, never advertised." },
-    { label: "Your chaos", note: "Beautifully unorganised. Never boring." },
-    { label: "Your expressions", note: "A whole language of their own." },
-    { label: "Your presence", note: "Comfort, without effort." },
+  /* ---- REFLECTIONS (Grounded, natural reflections on real friendship) ---- */
+  reflectionsTitle: "The quiet realities of our friendship.",
+  reflectionsSubtitle: "Not grand speeches — just how things genuinely are.",
+  reflections: [
     {
-      label: "The way you make ordinary moments memorable",
-      note: "That is the real talent.",
+      tag: "THE CORRIDORS",
+      title: "Making ordinary college days bearable",
+      description:
+        "Between long lectures, classroom benches, and waiting for the day to end — laughing through the chaos with you made every single day lighter.",
+    },
+    {
+      tag: "UNFILTERED TALKS",
+      title: "The best conversations had no script",
+      description:
+        "Spontaneous tea breaks, roaming around without a destination, and jumping from small gossip to big life dreams without missing a beat.",
+    },
+    {
+      tag: "GENUINE EASE",
+      title: "Zero pretension, always",
+      description:
+        "The comfort of never having to put on a front or filter your thoughts — just being completely, comfortably yourself.",
+    },
+    {
+      tag: "THROUGH IT ALL",
+      title: "A friend who stays constant",
+      description:
+        "Years move on, semesters change, and life gets busier, but having someone whose warmth never wavers is something I deeply cherish.",
     },
   ],
 
@@ -76,19 +97,21 @@ Stay exactly as wonderfully you as you are.`,
   wishButton: "MAKE A WISH",
   wishReveal: "May this year be your favourite chapter yet.",
 
-  /* ---- SECRET SURPRISE ---- */
-  secretButton: "There's one more thing...",
-  secretLines: ["If memories were photographs,", "I'd keep the whole album."],
-  secretSign: "Happy Birthday, SK ❤",
+  /* ---- BIRTHDAY TOAST (Heartfelt, open-air note — no artificial popups or gimmicks) ---- */
+  toastTag: "A quiet dedication",
+  toastTitle: "Here's to you, SK.",
+  toastLines: [
+    "To surviving another year of madness and coming out even brighter.",
+    "To dreaming big, laughing loud, and never losing your kind heart.",
+    "May your 21st year give you everything you've quietly worked for.",
+  ],
+  toastSign: "Always cheering for you. Happy Birthday, SK ❤",
 
   /* ---- FINAL ---- */
   finalTitle: "Happy Birthday, SK.",
   finalLines: [
-    "Here's to more laughs.",
-    "More adventures.",
-    "More food.",
-    "More gossip.",
-    "More unforgettable moments.",
+    "May this year bring you peace, unforgettable adventures,",
+    "and people who cherish your presence as much as you deserve.",
   ],
   finalSign: "— always your friend.",
   replayLabel: "REPLAY THE EXPERIENCE",

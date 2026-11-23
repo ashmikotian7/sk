@@ -28,10 +28,10 @@ export const Route = createFileRoute("/")({
 
 const SECTIONS = [
   { id: "home", label: "HOME" },
-  { id: "memories", label: "MEMORIES" },
   { id: "sk", label: "SK" },
+  { id: "memories", label: "MEMORIES" },
+  { id: "reflections", label: "CHAPTERS" },
   { id: "wish", label: "WISH" },
-  { id: "surprise", label: "SURPRISE" },
 ];
 
 function Experience() {
@@ -70,9 +70,9 @@ function Experience() {
         <Portrait />
         <Message />
         <Timeline />
-        <Things />
+        <Reflections />
         <Cake />
-        <Secret />
+        <Toast />
         <Final onReplay={() => setEntered(false)} />
       </div>
     </main>
@@ -319,45 +319,40 @@ function Timeline() {
   );
 }
 
-/* ---------------------------------------------------------------- THINGS */
-function Things() {
-  const [activeIdx, setActiveIdx] = useState<number | null>(null);
-
+/* ------------------------------------------------------------- REFLECTIONS */
+function Reflections() {
   return (
-    <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24 md:py-36">
+    <section id="reflections" className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24 md:py-36">
       <Reveal className="text-center">
-        <p className="label-xs text-wine">03 — You</p>
-        <h2 className="mt-4 font-display text-3xl text-ivory sm:mt-6 sm:text-4xl md:text-5xl">
-          {config.thingsTitle}
+        <p className="label-xs text-wine">03 — Chapters</p>
+        <h2 className="mt-4 font-display text-3xl leading-tight text-ivory sm:mt-6 sm:text-4xl md:text-5xl">
+          {config.reflectionsTitle}
         </h2>
+        <p className="mt-4 font-display text-base italic text-ivory/50 sm:text-lg">
+          {config.reflectionsSubtitle}
+        </p>
       </Reveal>
-      <div className="mt-10 flex flex-wrap justify-center gap-3 sm:mt-16 sm:gap-4">
-        {config.things.map((t, i) => {
-          const isExpanded = activeIdx === i;
-          return (
-            <Reveal key={t.label}>
-              <button
-                type="button"
-                onClick={() => setActiveIdx((prev) => (prev === i ? null : i))}
-                className={`glass-panel group block w-full max-w-xs cursor-pointer rounded-2xl px-5 py-3.5 text-left transition-all duration-700 hover:scale-[1.03] hover:wine-glow sm:w-auto sm:max-w-sm sm:rounded-full sm:px-6 sm:py-4 ${
-                  isExpanded ? "scale-[1.03] rounded-2xl wine-glow bg-wine/20" : ""
-                }`}
-                style={{ animation: `float-slow ${8 + (i % 4)}s ease-in-out ${i * 0.4}s infinite` }}
-              >
-                <span className="font-display text-base text-ivory/90 sm:text-lg">{t.label}</span>
-                <span
-                  className={`grid transition-all duration-700 ${
-                    isExpanded ? "grid-rows-[1fr]" : "grid-rows-[0fr] group-hover:grid-rows-[1fr]"
-                  }`}
-                >
-                  <span className="overflow-hidden">
-                    <span className="block pt-2 text-xs text-ivory/60 sm:text-sm">{t.note}</span>
-                  </span>
-                </span>
-              </button>
-            </Reveal>
-          );
-        })}
+
+      <div className="mt-12 grid gap-6 sm:mt-16 sm:grid-cols-2 sm:gap-8">
+        {config.reflections.map((item) => (
+          <Reveal key={item.tag} className="h-full">
+            <div className="glass-panel group relative flex h-full flex-col justify-between rounded-sm border border-wine/10 p-6 transition-all duration-500 hover:border-wine/30 hover:wine-glow sm:p-8">
+              <div>
+                <span className="label-xs font-mono tracking-widest text-wine/80">{item.tag}</span>
+                <h3 className="mt-3 font-display text-xl leading-snug text-ivory transition-colors duration-500 group-hover:text-wine/90 sm:text-2xl">
+                  {item.title}
+                </h3>
+                <p className="mt-4 font-display text-base leading-relaxed text-ivory/65 sm:text-lg">
+                  {item.description}
+                </p>
+              </div>
+              <div className="mt-6 flex items-center justify-between border-t border-ivory/5 pt-4">
+                <span className="h-px w-6 bg-wine/40 transition-all duration-500 group-hover:w-12 group-hover:bg-wine/80" />
+                <span className="text-[0.65rem] uppercase tracking-widest text-ivory/30">Chapter Note</span>
+              </div>
+            </div>
+          </Reveal>
+        ))}
       </div>
     </section>
   );
@@ -448,49 +443,33 @@ function Cake() {
   );
 }
 
-/* ---------------------------------------------------------------- SECRET */
-function Secret() {
-  const [open, setOpen] = useState(false);
+/* ------------------------------------------------------------------ TOAST */
+function Toast() {
   return (
-    <section id="surprise" className="px-4 py-16 text-center sm:px-6 sm:py-24 md:py-36">
+    <section className="relative mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-24 md:py-32">
       <Reveal>
-        <button
-          onClick={() => setOpen(true)}
-          className="font-display text-lg italic text-ivory/45 underline decoration-wine/60 underline-offset-8 transition-colors duration-500 hover:text-ivory sm:text-xl"
-        >
-          {config.secretButton}
-        </button>
-      </Reveal>
+        <div className="glass-panel relative mx-auto max-w-2xl rounded-sm border border-wine/20 p-8 wine-glow sm:p-12 md:p-16">
+          <p className="label-xs text-wine">{config.toastTag}</p>
+          <h2 className="mt-4 font-display text-3xl text-ivory sm:text-4xl md:text-5xl">
+            {config.toastTitle}
+          </h2>
 
-      <div
-        className={`fixed inset-0 z-50 flex items-center justify-center overflow-y-auto px-4 py-8 transition-all duration-[1400ms] sm:px-6 sm:py-12 ${
-          open ? "opacity-100" : "pointer-events-none opacity-0"
-        }`}
-        style={{ background: "oklch(0.07 0 0 / 97%)" }}
-        onClick={() => setOpen(false)}
-      >
-        <div
-          className="pointer-events-none absolute h-[24rem] w-[24rem] rounded-full blur-[110px] sm:h-[34rem] sm:w-[34rem] sm:blur-[150px]"
-          style={{ background: "color-mix(in oklab, var(--wine) 55%, transparent)" }}
-        />
-        <div
-          className={`relative my-auto max-w-xl transition-all duration-[1800ms] ${open ? "scale-100 blur-0" : "scale-90 blur-md"}`}
-        >
-          <div className="mx-auto mb-8 h-8 w-8 animate-pulse-heart sm:mb-12 sm:h-10 sm:w-10">
-            <div className="relative h-full w-full rotate-45 border border-wine bg-wine/25 before:absolute before:-left-1/2 before:top-0 before:h-full before:w-full before:rounded-full before:border before:border-wine before:bg-wine/25 before:content-[''] after:absolute after:-top-1/2 after:left-0 after:h-full after:w-full after:rounded-full after:border after:border-wine after:bg-wine/25 after:content-['']" />
+          <div className="mx-auto my-8 h-px w-16 bg-wine/40" />
+
+          <div className="space-y-4">
+            {config.toastLines.map((line, i) => (
+              <p
+                key={i}
+                className="font-display text-lg italic leading-relaxed text-ivory/80 sm:text-xl md:text-2xl"
+              >
+                {line}
+              </p>
+            ))}
           </div>
-          {config.secretLines.map((l) => (
-            <p
-              key={l}
-              className="font-display text-2xl leading-snug text-ivory sm:text-4xl md:text-5xl"
-            >
-              {l}
-            </p>
-          ))}
-          <p className="label-xs mt-8 text-wine sm:mt-12">{config.secretSign}</p>
-          <p className="label-xs mt-10 text-ivory/25 sm:mt-16">Tap anywhere to close</p>
+
+          <p className="label-xs mt-10 tracking-widest text-wine/90">{config.toastSign}</p>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }
