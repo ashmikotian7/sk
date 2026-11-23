@@ -30,7 +30,6 @@ const SECTIONS = [
   { id: "home", label: "HOME" },
   { id: "sk", label: "SK" },
   { id: "memories", label: "MEMORIES" },
-  { id: "reflections", label: "CHAPTERS" },
   { id: "wish", label: "WISH" },
 ];
 
@@ -70,7 +69,6 @@ function Experience() {
         <Portrait />
         <Message />
         <Timeline />
-        <Reflections />
         <Cake />
         <Toast />
         <Final onReplay={() => setEntered(false)} />
@@ -319,45 +317,6 @@ function Timeline() {
   );
 }
 
-/* ------------------------------------------------------------- REFLECTIONS */
-function Reflections() {
-  return (
-    <section id="reflections" className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24 md:py-36">
-      <Reveal className="text-center">
-        <p className="label-xs text-wine">03 — Chapters</p>
-        <h2 className="mt-4 font-display text-3xl leading-tight text-ivory sm:mt-6 sm:text-4xl md:text-5xl">
-          {config.reflectionsTitle}
-        </h2>
-        <p className="mt-4 font-display text-base italic text-ivory/50 sm:text-lg">
-          {config.reflectionsSubtitle}
-        </p>
-      </Reveal>
-
-      <div className="mt-12 grid gap-6 sm:mt-16 sm:grid-cols-2 sm:gap-8">
-        {config.reflections.map((item) => (
-          <Reveal key={item.tag} className="h-full">
-            <div className="glass-panel group relative flex h-full flex-col justify-between rounded-sm border border-wine/10 p-6 transition-all duration-500 hover:border-wine/30 hover:wine-glow sm:p-8">
-              <div>
-                <span className="label-xs font-mono tracking-widest text-wine/80">{item.tag}</span>
-                <h3 className="mt-3 font-display text-xl leading-snug text-ivory transition-colors duration-500 group-hover:text-wine/90 sm:text-2xl">
-                  {item.title}
-                </h3>
-                <p className="mt-4 font-display text-base leading-relaxed text-ivory/65 sm:text-lg">
-                  {item.description}
-                </p>
-              </div>
-              <div className="mt-6 flex items-center justify-between border-t border-ivory/5 pt-4">
-                <span className="h-px w-6 bg-wine/40 transition-all duration-500 group-hover:w-12 group-hover:bg-wine/80" />
-                <span className="text-[0.65rem] uppercase tracking-widest text-ivory/30">Chapter Note</span>
-              </div>
-            </div>
-          </Reveal>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 /* ------------------------------------------------------------------ CAKE */
 function Cake() {
   const [wished, setWished] = useState(false);
@@ -367,7 +326,7 @@ function Cake() {
       className="relative mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-24 md:py-36"
     >
       <Reveal>
-        <p className="label-xs text-wine">04 — The wish</p>
+        <p className="label-xs text-wine">03 — The wish</p>
         <h2 className="mt-4 font-display text-3xl text-ivory sm:mt-6 sm:text-5xl md:text-6xl">
           {config.wishTitle}
         </h2>

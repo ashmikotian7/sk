@@ -62,36 +62,6 @@ Stay exactly as wonderfully you as you are.`,
     mem7, mem8, mem9, mem10, mem11, sk4, sk5, sk6, sk7, sk8, sk9
   ],
 
-  /* ---- REFLECTIONS (Grounded, natural reflections on real friendship) ---- */
-  reflectionsTitle: "The quiet realities of our friendship.",
-  reflectionsSubtitle: "Not grand speeches — just how things genuinely are.",
-  reflections: [
-    {
-      tag: "THE CORRIDORS",
-      title: "Making ordinary college days bearable",
-      description:
-        "Between long lectures, classroom benches, and waiting for the day to end — laughing through the chaos with you made every single day lighter.",
-    },
-    {
-      tag: "UNFILTERED TALKS",
-      title: "The best conversations had no script",
-      description:
-        "Spontaneous tea breaks, roaming around without a destination, and jumping from small gossip to big life dreams without missing a beat.",
-    },
-    {
-      tag: "GENUINE EASE",
-      title: "Zero pretension, always",
-      description:
-        "The comfort of never having to put on a front or filter your thoughts — just being completely, comfortably yourself.",
-    },
-    {
-      tag: "THROUGH IT ALL",
-      title: "A friend who stays constant",
-      description:
-        "Years move on, semesters change, and life gets busier, but having someone whose warmth never wavers is something I deeply cherish.",
-    },
-  ],
-
   /* ---- WISH ---- */
   wishTitle: "Make a wish, SK.",
   wishButton: "MAKE A WISH",
