@@ -36,14 +36,14 @@ export const config = {
 
   /* ---- HERO ---- */
   heroTitle: "For SK.",
-  heroLines: ["Some people become memories.", "Some become a part of your story."],
+  heroLines: ["Some people gives memories.", "Some become a part of your story."],
   enterLabel: "ENTER HER WORLD",
 
   /* ---- PERSONAL MESSAGE (typewriter reveal) ---- */
   messageTitle: "A little something for you.",
   message: `To SK,
 
-Another year, another collection of moments waiting to become memories.
+Another year, another collection of moments waiting to make memories.
 
 From random conversations to uncontrollable laughter, from little gossip sessions to the moments that somehow became unforgettable — I'm grateful for every chapter we've shared.
 
@@ -73,7 +73,7 @@ Stay exactly as wonderfully you as you are.`,
   toastLines: [
     "To surviving another year of madness and coming out even brighter.",
     "To dreaming big, laughing loud, and never losing your kind heart.",
-    "May your 21st year give you everything you've quietly worked for.",
+    "May your 23rd year give you everything you've quietly worked for.",
   ],
   toastSign: "Always cheering for you. Happy Birthday, SK ❤",
 

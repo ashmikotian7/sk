@@ -9,15 +9,15 @@ import { Typewriter } from "@/components/Typewriter";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: `For ${config.name} — A Cinematic Birthday Experience` },
+      { title: `For ${config.name} — Hey It's SK's Birthday!` },
       {
         name: "description",
-        content: `A private, cinematic digital birthday world made for ${config.name} — memories, wishes and one secret surprise.`,
+        content: `A private, digital birthday world made for ${config.name} — memories, wishes.`,
       },
       { property: "og:title", content: `For ${config.name}.` },
       {
         property: "og:description",
-        content: "Some people become memories. Some become a part of your story.",
+        content: "Some people gives memories. Some become a part of your story.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
